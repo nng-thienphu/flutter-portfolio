@@ -3,7 +3,7 @@ import 'package:portfolio/constant/style.dart';
 
 class SkillButton extends StatelessWidget {
   final String skill;
-  final NetworkImage progIcon;
+  final AssetImage progIcon;
   const SkillButton({Key? key, required this.skill, required this.progIcon})
       : super(key: key);
 
