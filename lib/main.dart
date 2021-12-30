@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/constant/style.dart';
 import 'layout.dart';
@@ -32,19 +31,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-// import 'experience.dart';
-
-// void main() {
-//   runApp(experiencePage());
-// }
-
-// class experiencePage extends StatelessWidget {
-//   const experiencePage({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(home: experienceWidget());
-//   }
-// }
