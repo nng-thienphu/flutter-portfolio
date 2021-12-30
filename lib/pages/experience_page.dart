@@ -5,7 +5,6 @@ import 'package:portfolio/constant/style.dart';
 import 'package:portfolio/pages/experience_page_info.dart';
 import 'package:portfolio/widgets/text_heading.dart';
 
-//String hoverWidget = "";
 StreamController<String> experienceController =
     StreamController<String>.broadcast();
 
@@ -40,7 +39,6 @@ class ExperienceLayout extends StatelessWidget {
         crossAxisAlignment:
             CrossAxisAlignment.center, //Center Column contents horizontally,
         children: [
-          // 1 Monitor in the Row
           Container(
               width: 300,
               height: 250,
@@ -60,12 +58,10 @@ class ExperienceLayout extends StatelessWidget {
                       child: Container(color: whiteBackground),
                     ),
                   ]),
-                  // STOP AT THE STEP REPOSITION THIS CONTAINER
                   ExperienceViewList(),
                 ],
               )),
           SizedBox(width: 40),
-          // 2nd monitor in the Row
           Container(
               width: 500,
               height: 400,
@@ -78,7 +74,6 @@ class ExperienceLayout extends StatelessWidget {
 }
 
 class ExperienceWidgets extends StatefulWidget {
-  // final ValueListenable<String> activeWidget = "Education";
   final Stream<String> stream;
   const ExperienceWidgets({Key? key, required this.stream}) : super(key: key);
 
@@ -88,8 +83,6 @@ class ExperienceWidgets extends StatefulWidget {
 
 class _ExperienceWidgetsState extends State<ExperienceWidgets> {
   Widget showWidget = EducationWidget();
-  //bool _disposed = false;
-  //DateTime time = DateTime.now();
 
   void changeWidget(String activeWidget) {
     if (mounted) {
@@ -182,7 +175,6 @@ class onHoverExperienceButton extends StatefulWidget {
 
 class _onHoverExperienceButtonState extends State<onHoverExperienceButton> {
   bool isHovered = false;
-  // StreamController<String> experienceController = StreamController<String>();
 
   @override
   Widget build(BuildContext context) {
@@ -208,7 +200,6 @@ class _onHoverExperienceButtonState extends State<onHoverExperienceButton> {
             elevation: 2.0,
             fillColor: Colors.blue,
             child: this.widget.btnIcon,
-            //padding: EdgeInsets.all(0.0),
             shape: CircleBorder(),
           ),
           Text("${this.widget.btnText}"),
@@ -218,7 +209,6 @@ class _onHoverExperienceButtonState extends State<onHoverExperienceButton> {
   }
 
   void onEntered(bool isHovered) {
-    //experienceController.add(this.widget.btnText);
     experienceController.add(this.widget.btnText);
     setState(() {
       this.isHovered = isHovered;
